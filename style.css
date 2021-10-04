@@ -1,0 +1,51 @@
+
+
+#small, #medium, #large {
+    position: relative;
+  }
+  
+  @media only screen and (max-width: 300px) {
+      body {
+        background-color: red;
+        display:block;  
+        font-size: 15px;
+      }
+      #medium, #large{
+          display: list-item; 
+        }
+    }
+    @media only screen and (max-width: 768px) and (min-width: 301px) {
+      body {
+        background-color: green;
+        font-size: 20px;
+        
+      }
+      #small{
+         width: calc(66,666%); 
+         float: left;
+      }   
+      #medium{
+          width: calc(33,333%);
+          float: right;
+      } 
+      #large{
+          width: 100%;
+  
+      }
+      body .clear:nth-child(4) {
+        clear:both;
+      }
+    }
+    
+    @media only screen and (min-width: 768px) {
+      body {
+        background-color:blue;
+        display: inline-block;
+        font-size: 30px;
+      }
+      #small, #medium, #large {
+        width: calc(33,333%);
+        float: left;
+      }
+  } 
+
